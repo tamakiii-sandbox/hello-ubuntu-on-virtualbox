@@ -11,6 +11,7 @@ deps:
 
 build:
 	vagrant up --provision
+	vagrant reload
 
 clean:
 	vagrant destroy
