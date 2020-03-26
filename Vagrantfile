@@ -93,6 +93,11 @@ Vagrant.configure("2") do |config|
 
     gpasswd -a vagrant docker
     chgrp docker /var/run/docker.sock
+
+    echo '{ "experimental": true }' > /etc/docker/daemon.json
+
     service docker restart
+
+    snap install --classic code
   SHELL
 end
